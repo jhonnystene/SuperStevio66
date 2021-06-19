@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/DeathPlane.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/Marlio.tscn" type="PackedScene" id=4]
+[ext_resource path="res://levels/level1.gd" type="Script" id=9]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1245187, 2, 4, 1245188, 2, 5, 1245189, 2, 5, 1245190, 2, 5, 1245191, 2, 6 )
+
+[node name="Marlio" parent="." instance=ExtResource( 4 )]
+position = Vector2( 153.235, 545.23 )
+
+[node name="DeathPlane" parent="." instance=ExtResource( 3 )]
+position = Vector2( 504, 632 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="UI" parent="." instance=ExtResource( 2 )]
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Jump Pads" type="Node" parent="."]
+
+[node name="Stevens" type="Node" parent="."]
