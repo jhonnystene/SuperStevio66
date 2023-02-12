@@ -8,7 +8,7 @@
 [ext_resource path="res://objects/ParachuteDispenser.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/Spike.tscn" type="PackedScene" id=7]
 [ext_resource path="res://objects/Uppyboi.tscn" type="PackedScene" id=8]
-[ext_resource path="res://levels/old_levels/level1.gd" type="Script" id=9]
+[ext_resource path="res://old_levels/level1.gd" type="Script" id=9]
 [ext_resource path="res://objects/Door.tscn" type="PackedScene" id=10]
 
 [node name="Level" type="Node2D"]

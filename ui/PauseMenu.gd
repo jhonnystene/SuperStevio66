@@ -10,6 +10,7 @@ func _process(_delta):
 func _on_QuitButton_pressed():
 	get_tree().paused = false
 	Global.game_running = false
+	Global.reset_world()
 	get_tree().change_scene("res://ui/TitleScreen.tscn")
 
 func _on_ResumeButton_pressed():

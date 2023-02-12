@@ -63,6 +63,7 @@ leftPadStyle = "D-Pad"
 
 [node name="PauseMenu" type="Control" parent="."]
 pause_mode = 2
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -102,7 +103,7 @@ margin_bottom = 97.0
 theme = ExtResource( 7 )
 text = "0"
 
-[node name="StevensCollected2" type="Label" parent="PauseMenu/Background/Foreground"]
+[node name="InstrumentsCollected" type="Label" parent="PauseMenu/Background/Foreground"]
 margin_left = 262.0
 margin_top = 58.0
 margin_right = 302.0

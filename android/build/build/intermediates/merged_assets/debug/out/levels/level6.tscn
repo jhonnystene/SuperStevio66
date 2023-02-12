@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://tilesets/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://ui/UI.tscn" type="PackedScene" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://objects/ParachuteDispenser.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/Spike.tscn" type="PackedScene" id=7]
 [ext_resource path="res://objects/Uppyboi.tscn" type="PackedScene" id=8]
-[ext_resource path="res://levels/old_levels/level1.gd" type="Script" id=9]
+[ext_resource path="res://old_levels/level1.gd" type="Script" id=9]
 [ext_resource path="res://objects/Door.tscn" type="PackedScene" id=10]
+[ext_resource path="res://objects/Instrument.tscn" type="PackedScene" id=11]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 9 )
@@ -59,8 +60,8 @@ position = Vector2( -72, 1430 )
 [node name="Steven2" parent="Stevens" instance=ExtResource( 5 )]
 position = Vector2( 1168, 496 )
 
-[node name="Steven3" parent="Stevens" instance=ExtResource( 5 )]
-position = Vector2( 1264, 496 )
-
 [node name="Door" parent="." instance=ExtResource( 10 )]
 position = Vector2( 760, 515 )
+
+[node name="Instrument" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1264, 496 )

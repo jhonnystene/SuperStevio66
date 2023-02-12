@@ -2,6 +2,7 @@ extends CanvasLayer
 
 func _process(_delta):
 	$PauseMenu/Background/Foreground/StevensCollected.text = str(Global.stevens)
+	$PauseMenu/Background/Foreground/InstrumentsCollected.text = str(len(Global.instruments_collected))
 	$PauseMenu/Background/Foreground/TimePlaying.text = "Time: " + str(Global.get_time())
 	$Control.rect_size = get_viewport().size;
 	

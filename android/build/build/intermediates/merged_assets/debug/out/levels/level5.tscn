@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://tilesets/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://ui/UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/Instrument.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/Marlio.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/Steven.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objects/ParachuteDispenser.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/Spike.tscn" type="PackedScene" id=7]
 [ext_resource path="res://objects/Uppyboi.tscn" type="PackedScene" id=8]
-[ext_resource path="res://levels/old_levels/level1.gd" type="Script" id=9]
+[ext_resource path="res://old_levels/level1.gd" type="Script" id=9]
 [ext_resource path="res://objects/Door.tscn" type="PackedScene" id=10]
 
 [node name="Level" type="Node2D"]
@@ -315,9 +316,6 @@ position = Vector2( -400, 2064 )
 [node name="Steven34" parent="Stevens" instance=ExtResource( 5 )]
 position = Vector2( -464, 2032 )
 
-[node name="Steven35" parent="Stevens" instance=ExtResource( 5 )]
-position = Vector2( -560, 2032 )
-
 [node name="Steven36" parent="Stevens" instance=ExtResource( 5 )]
 position = Vector2( -608, 2096 )
 
@@ -386,3 +384,6 @@ position = Vector2( -464, 2992 )
 
 [node name="Door" parent="." instance=ExtResource( 10 )]
 position = Vector2( -496, 2992 )
+
+[node name="Instrument" parent="." instance=ExtResource( 3 )]
+position = Vector2( -560, 2032 )

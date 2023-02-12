@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://tilesets/Tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://levels/old_levels/level1.gd" type="Script" id=2]
+[ext_resource path="res://old_levels/level1.gd" type="Script" id=2]
 [ext_resource path="res://objects/DeathPlane.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/Marlio.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/Door.tscn" type="PackedScene" id=6]

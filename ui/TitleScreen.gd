@@ -4,8 +4,12 @@ var anim_cycle = 0
 
 var do_splash_fadeout = false
 
+func _ready():
+	$Control/StevensCollected.text = str(Global.stevens)
+	$Control/InstrumentsCollected.text = str(len(Global.instruments_collected))
+
 func _on_TextureButton_pressed():
-	Global.switch_to("res://levels/level1.tscn")
+	Global.switch_to("res://ui/LevelSelectScreen.tscn")
 
 func _on_Timer_timeout():
 	if(anim_cycle == 0):

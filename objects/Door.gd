@@ -6,4 +6,5 @@ func _on_Area2D_body_entered(body):
 		file_name = file_name.replace("res://levels/level", "")
 		file_name = file_name.replace(".tscn", "")
 		var level_no = int(file_name) + 1
+		Global.max_level = level_no
 		Global.switch_to("res://levels/level" + str(level_no) + ".tscn")
