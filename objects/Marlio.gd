@@ -13,13 +13,17 @@ var DECEL = DECEL_NORMAL
 
 const GRAV_NORMAL = 10
 const GRAV_PARACHUTE = 1
+const GRAV_NONE = 0
 var GRAV = GRAV_NORMAL
 const JUMP = -200
+const CLIMB = -30
 
 var velocity = Vector2(0, 0)
 
 var parachuting = false
 var parachute_just_started = false
+
+var grabbing_moss = 0
 
 var stevens = 0
 
@@ -46,6 +50,10 @@ func _physics_process(delta):
 		GRAV = GRAV_PARACHUTE
 		ACCEL = ACCEL_PARACHUTE
 		DECEL = DECEL_PARACHUTE
+	elif(grabbing_moss and left + right != 0):
+		GRAV = GRAV_NONE
+		ACCEL = ACCEL_NORMAL
+		DECEL = DECEL_NORMAL
 	else:
 		GRAV = GRAV_NORMAL
 		ACCEL = ACCEL_NORMAL
@@ -81,7 +89,7 @@ func _physics_process(delta):
 		$spr_marlio.flip_h = false
 	
 	velocity.y += GRAV
-	if(is_on_floor()):
+	if(is_on_floor() or GRAV == GRAV_NONE):
 		if(!parachute_just_started):
 			if(parachuting == true):
 				$parachute_particles.emitting = true
@@ -92,7 +100,10 @@ func _physics_process(delta):
 			velocity.y = 0
 			
 		if(jump):
-			velocity.y = JUMP
-			$AudioStreamPlayer.play()
+			if(grabbing_moss):
+				velocity.y = CLIMB
+			else:
+				velocity.y = JUMP
+				$AudioStreamPlayer.play()
 
 	move_and_slide(velocity, Vector2(0, -1))

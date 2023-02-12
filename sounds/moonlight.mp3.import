@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/moonlight.mp3-fdf626f66fe591a3e185474e0ec94e0d.mp3str"
+
+[deps]
+
+source_file="res://sounds/moonlight.mp3"
+dest_files=[ "res://.import/moonlight.mp3-fdf626f66fe591a3e185474e0ec94e0d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

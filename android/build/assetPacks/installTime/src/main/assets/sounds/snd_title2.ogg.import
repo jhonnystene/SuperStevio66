@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/snd_title2.ogg-cc8719e430fcc3755eb61473e50c577e.oggstr"
+
+[deps]
+
+source_file="res://sounds/snd_title2.ogg"
+dest_files=[ "res://.import/snd_title2.ogg-cc8719e430fcc3755eb61473e50c577e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
