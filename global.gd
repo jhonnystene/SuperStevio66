@@ -79,5 +79,12 @@ func load_game():
 	instruments_collected = save_data["instruments_collected"]
 	save_game.close()
 
+func delete_save():
+	timer = 0
+	stevens = 0
+	max_level = 1
+	instruments_collected = []
+	save_game()
+
 func _ready():
 	load_game()
